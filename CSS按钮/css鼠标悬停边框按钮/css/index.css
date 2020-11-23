@@ -1,0 +1,146 @@
+body {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFFACE;
+}
+
+body .wrap {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 450px;
+}
+
+body .wrap a {
+    text-decoration: none;
+    color: #222;
+    padding: 20px;
+    background: #efefef;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    font-family: 'Oswald';
+    margin: 20px;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+body .wrap a:before {
+    content: '';
+    position: absolute;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    top: calc(2px/-1);
+    left: calc(2px/-1);
+    background: -webkit-gradient(linear, left top, right top, from(blue), to(blue)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, blue), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, blue), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, from(blue), to(blue)), -webkit-gradient(linear, right top, left top, from(blue), to(blue));
+    background: linear-gradient(to right, blue 0%, blue 100%), linear-gradient(to top, blue 50%, transparent 50%), linear-gradient(to top, blue 50%, transparent 50%), linear-gradient(to right, blue 0%, blue 100%), linear-gradient(to left, blue 0%, blue 100%);
+    background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+    background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+    background-repeat: no-repeat, no-repeat;
+    -webkit-transition: background-position 0.3s ease-in-out, background-size 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: background-position 0.3s ease-in-out, background-size 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out, background-size 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out, background-size 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    -webkit-transform: scaleX(0) rotate(0deg);
+    transform: scaleX(0) rotate(0deg);
+    -webkit-transition-delay: 0.6s, 0.3s, 0s;
+    transition-delay: 0.6s, 0.3s, 0s;
+}
+
+body .wrap a:hover:before {
+    background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+    background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+    -webkit-transform: scaleX(1) rotate(0deg);
+    transform: scaleX(1) rotate(0deg);
+    -webkit-transition-delay: 0s, 0.3s, 0.6s;
+    transition-delay: 0s, 0.3s, 0.6s;
+}
+
+body .wrap a:nth-of-type(2) {
+    position: relative;
+}
+
+body .wrap a:nth-of-type(2):before {
+    content: '';
+    position: absolute;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    top: calc(4px/-1);
+    left: calc(4px/-1);
+    background: -webkit-gradient(linear, left top, right top, from(#222), to(#222)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #222), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #222), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, from(#222), to(#222)), -webkit-gradient(linear, right top, left top, from(#222), to(#222));
+    background: linear-gradient(to right, #222 0%, #222 100%), linear-gradient(to top, #222 50%, transparent 50%), linear-gradient(to top, #222 50%, transparent 50%), linear-gradient(to right, #222 0%, #222 100%), linear-gradient(to left, #222 0%, #222 100%);
+    background-size: 100% 4px, 4px 200%, 4px 200%, 0% 4px, 0% 4px;
+    background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+    background-repeat: no-repeat, no-repeat;
+    -webkit-transition: background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+    transition: background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+    -webkit-transform: scaleX(0) rotate(180deg);
+    transform: scaleX(0) rotate(180deg);
+    -webkit-transition-delay: 0.4s, 0.2s, 0s;
+    transition-delay: 0.4s, 0.2s, 0s;
+}
+
+body .wrap a:nth-of-type(2):hover:before {
+    background-size: 200% 4px, 4px 400%, 4px 400%, 55% 4px, 55% 4px;
+    background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+    -webkit-transform: scaleX(1) rotate(180deg);
+    transform: scaleX(1) rotate(180deg);
+    -webkit-transition-delay: 0s, 0.2s, 0.4s;
+    transition-delay: 0s, 0.2s, 0.4s;
+}
+
+body .wrap a:nth-of-type(3) {
+    position: relative;
+    align-self: flex-end;
+}
+
+body .wrap a:nth-of-type(3):before {
+    content: '';
+    position: absolute;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    top: calc(10px/-1);
+    left: calc(10px/-1);
+    -webkit-mask: -webkit-gradient(linear, left top, right top, from(#000), to(#000)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #000), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #000), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, from(#000), to(#000)), -webkit-gradient(linear, right top, left top, from(#000), to(#000));
+    -webkit-mask: linear-gradient(to right, #000 0%, #000 100%), linear-gradient(to top, #000 50%, transparent 50%), linear-gradient(to top, #000 50%, transparent 50%), linear-gradient(to right, #000 0%, #000 100%), linear-gradient(to left, #000 0%, #000 100%);
+    mask: -webkit-gradient(linear, left top, right top, from(#000), to(#000)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #000), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #000), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, from(#000), to(#000)), -webkit-gradient(linear, right top, left top, from(#000), to(#000));
+    mask: linear-gradient(to right, #000 0%, #000 100%), linear-gradient(to top, #000 50%, transparent 50%), linear-gradient(to top, #000 50%, transparent 50%), linear-gradient(to right, #000 0%, #000 100%), linear-gradient(to left, #000 0%, #000 100%);
+    -webkit-mask-size: 100% 10px, 10px 200%, 10px 200%, 0% 10px, 0% 10px;
+    mask-size: 100% 10px, 10px 200%, 10px 200%, 0% 10px, 0% 10px;
+    -webkit-mask-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+    mask-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+    -webkit-mask-repeat: no-repeat, no-repeat;
+    mask-repeat: no-repeat, no-repeat;
+    -webkit-transition: -webkit-transform 0.4s ease-in-out, -webkit-mask-position 0.4s ease-in-out, -webkit-mask-size 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out, -webkit-mask-position 0.4s ease-in-out, -webkit-mask-size 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, mask-position 0.4s ease-in-out, mask-size 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, mask-position 0.4s ease-in-out, mask-size 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out, -webkit-mask-position 0.4s ease-in-out, -webkit-mask-size 0.4s ease-in-out;
+    -webkit-transform: scaleX(0) rotate(0deg);
+    transform: scaleX(0) rotate(0deg);
+    -webkit-transition-delay: 0.8s, 0.4s, 0s;
+    transition-delay: 0.8s, 0.4s, 0s;
+    background: -webkit-gradient(linear, left top, left bottom, from(#40e0d0), color-stop(#ff8c00), to(#ff0080));
+    background: linear-gradient(to bottom, #40e0d0, #ff8c00, #ff0080);
+}
+
+body .wrap a:nth-of-type(3):hover:before {
+    -webkit-mask-size: 200% 10px, 10px 400%, 10px 400%, 55% 10px, 55% 10px;
+    mask-size: 200% 10px, 10px 400%, 10px 400%, 55% 10px, 55% 10px;
+    -webkit-mask-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+    mask-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+    -webkit-transform: scaleX(1) rotate(0deg);
+    transform: scaleX(1) rotate(0deg);
+    -webkit-transition-delay: 0s, 0.4s, 0.8s;
+    transition-delay: 0s, 0.4s, 0.8s;
+}

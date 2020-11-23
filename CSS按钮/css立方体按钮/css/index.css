@@ -1,0 +1,93 @@
+/* latin-ext */
+
+@font-face {
+    font-family: 'Krona One';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Krona One'), local('KronaOne-Regular'), url(./jAnEgHdjHcjgfIb1ZcUyOIWg7cU.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+/* latin */
+
+@font-face {
+    font-family: 'Krona One';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Krona One'), local('KronaOne-Regular'), url(./jAnEgHdjHcjgfIb1ZcUyNoWg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #96c8fb;
+    background-image: linear-gradient(315deg, #96c8fb 0%, #ddbdfc 74%);
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    font-family: 'Krona One', sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: 300ms;
+}
+
+.cyan {
+    background: #4acff0;
+    box-shadow: 0px 5px #389cb5, 0px 10px 10px rgba(0, 0, 0, 0.25);
+    z-index: -1;
+}
+
+.magenta {
+    background: #f058f5;
+    box-shadow: 0px 5px #a23ca6, 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.yellow {
+    background: #f0e54a;
+    box-shadow: 0px 5px #aba232, 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.black {
+    background: #474747;
+    box-shadow: 0px 5px #292929, 0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+button:hover {
+    transform: translateY(5px);
+    box-shadow: 0px 0px transparent, 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+button:focus {
+    outline: none;
+}

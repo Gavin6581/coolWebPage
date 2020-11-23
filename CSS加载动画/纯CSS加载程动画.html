@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        display: grid;
+        overflow: hidden;
+        margin: 0;
+        height: 100vh;
+        background: #000;
+    }
+    
+    body::before {
+        padding: 7.25em;
+        background: radial-gradient(#e56589 3.25em, #6c97c3 4.25em);
+        content: "";
+    }
+    
+    body::after {
+        position: absolute;
+        top: calc(50% + 6.25em);
+        left: 50%;
+        transform: translate(-50%);
+        color: rgba(255, 255, 255, 0.5);
+        font: 200 1.5em/ 1.25 sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        animation: f 1s ease-in-out infinite alternate;
+        content: "loading";
+    }
+    
+    @keyframes f {
+        to {
+            opacity: 0;
+        }
+    }
+    
+    div,
+     ::before,
+     ::after {
+        place-self: center;
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .loader {
+        display: grid;
+        padding: 2em;
+        background: inherit;
+        filter: contrast(9);
+        mix-blend-mode: multiply;
+    }
+    
+    .loader::before,
+    .loader::after {
+        padding: 6.25em;
+        --stops: #fff calc(1em - 1px), transparent 1em;
+        background: radial-gradient(circle at 1em, var(--stops)), radial-gradient(circle at 50% 1em, var(--stops)), radial-gradient(circle at calc(100% - 1em), var(--stops)), radial-gradient(circle at 50% calc(100% - 1em), var(--stops));
+        filter: blur(9px);
+        animation: a .875s ease-in-out infinite;
+        content: "";
+    }
+    
+    .loader::before {
+        animation-name: b;
+    }
+    
+    @keyframes a {
+        33.33%,
+        66.67% {
+            padding: 1em;
+        }
+    }
+    
+    @keyframes b {
+        33.33% {
+            transform: rotate(0deg);
+        }
+        66.67%,
+        100% {
+            transform: rotate(90deg);
+        }
+    }
+</style>
+
+<body>
+    <div class='loader'>loading</div>
+</body>
+
+</html>

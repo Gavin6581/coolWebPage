@@ -1,0 +1,21 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: #000;
+}
+
+canvas {
+    display: block;
+}
+
+.waves {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}

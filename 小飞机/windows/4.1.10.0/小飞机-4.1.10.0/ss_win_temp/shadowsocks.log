@@ -1,0 +1,12 @@
+2020-11-17 20:21:13.9583|INFO|Shadowsocks.Controller.I18N|Current language is: zh-CN
+2020-11-17 20:21:15.2595|INFO|Shadowsocks.Controller.Listener|Shadowsocks started (4.1.10.0)
+2020-11-17 20:55:21.2513|INFO|Shadowsocks.Program|controller stopped
+2020-11-17 20:55:21.2513|INFO|Shadowsocks.Program|os suspend
+2020-11-17 21:16:50.8592|INFO|Shadowsocks.Program|os wake up
+2020-11-17 21:17:01.9243|INFO|Shadowsocks.Controller.Listener|Shadowsocks started (4.1.10.0)
+2020-11-17 21:17:02.8595|INFO|Shadowsocks.Program|controller started
+2020-11-17 23:19:26.4021|INFO|Shadowsocks.Program|controller stopped
+2020-11-17 23:19:26.4021|INFO|Shadowsocks.Program|os suspend
+2020-11-18 07:05:47.9472|INFO|Shadowsocks.Program|os wake up
+2020-11-18 07:05:58.3508|INFO|Shadowsocks.Controller.Listener|Shadowsocks started (4.1.10.0)
+2020-11-18 07:05:58.9701|INFO|Shadowsocks.Program|controller started

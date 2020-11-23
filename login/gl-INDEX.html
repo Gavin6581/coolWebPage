@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>管理员登录页面</title>
+<style>
+body {
+	background: url(./img/gl_denglu.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.haha {
+			position: relative;
+			width: 700px;
+			height: 400px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #060c21;
+			margin-top: 200px;
+		}
+		/* 用box的伪元素添加一个面积比box略大的矩形,并通过改变层叠次序,置于box的下层,达到给box设置边框的效果 */
+		.haha::before {
+			content: '';
+			position: absolute;
+			top: -2px;
+			left: -1px;
+			right: -1px;
+			bottom: -2px;
+			background: #fff;
+			z-index: -1;
+		}
+		/* 于上面类似,做一个面积比box略大的矩形,并通过改变层叠次序,置于box的下层,达到给box设置边框的效果 */
+		.haha::after {
+			content: '';
+			position: absolute;
+			top: -2px;
+			left: -1px;
+			right: -1px;
+			bottom: -2px;
+			background: #fff;
+			z-index: -2;
+			/* 滤镜属性  给图像设置高斯模糊。"radius"一值设定高斯函数的标准差，或者是屏幕上以多少像素融在一起，所以值越大越模糊；如果没有设定值，则默认是0；这个参数可设置css长度值，但不接受百分比值。 */
+			filter: blur(40px);
+		}
+		.haha::before,
+		.haha::after {
+			/* linear-gradient() 函数用于创建一个线性渐变的 "图像"。 参数1:用角度值指定渐变的方向（或角度）  12点钟方向为0deg*/
+			background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
+		}
+		.box {
+			padding: 20px;
+			box-sizing: border-box;
+			color: #fff;
+		}
+
+		.box {
+			width: 700px;
+			padding: 10px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: #000000;
+			text-align: center;
+		}
+		.box h4 {
+			color: white;
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+		.box input[type='text'],
+		.box input[type='password'] {
+			border: 0;
+			background: none;
+			display: block;
+			margin: 20px auto;
+			text-align: center;
+			border: 2px solid #3498db;
+			padding: 14px 10px;
+			width: 200px;
+			outline: none;
+			color: white;
+			border-radius: 24px;
+			transition: 0.25s;
+		}
+		.box input[type='text']:focus,
+		.box input[type='password']:focus {
+			width: 280px;
+			border-color: #2ecc71;
+		}
+		.submit {
+			border: 0;
+			background: none;
+			margin: 20px auto;
+			margin-top: 0;
+			display: inline-block;
+			text-align: center;
+			border: 2px solid #3498db;
+			padding: 10px 40px;
+			outline: none;
+			color: white;
+			border-radius: 24px;
+			transition: 0.25s;
+			cursor: pointer;
+			text-decoration: none;
+			font-size: 12px;
+		}
+		.submit:hover {
+			background: #2ecc71;
+			border-color: #2ecc71;
+		}
+</style>
+</head>
+<script>
+	function refresh() {
+		document.getElementById("img1").scr = "gl_create_checkcode?a="
+				+ Math.random();
+	}
+</script>
+<body>
+	<center>
+		<div class="haha">
+		<div class="box">
+		<form method="post" name="form1">
+			<table align="center">
+				<tr>
+					<td colspan="3" align="center" height="40"><font
+						color="#7fff00" size="5">填写管理员登录信息</font></td>
+				</tr>
+				<tr>
+					<td align="center"><font color="#F8F8FF" size="4">管理员账号：</font></td>
+					<td><input type="text" name="userid"
+						onclick="mes.inner.HTML=''" value="${param.userid}"></td>
+				</tr>
+				<tr>
+					<td align="right"><font color="#F8F8FF" size="4">管理员密码：</font></td>
+					<td><input type="password" name="userpwd"
+						value="${param.userpwd}"></td>
+				</tr>
+				<tr>
+					<td align="right"><font color="#F8F8FF" size="4">验证码：</font></td>
+					<td><input type="text" name="checkcode"></td>
+					<td><img border="0" src="gl_create_checkcode" id="img1"></td>
+					
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						<input type="submit" value="换 一 张" onclick="refresh()">
+						<input type="submit" value="登 录" onclick="form1.action='gl_denglu_yanzheng'">
+					</td>
+				</tr>
+			</table>
+			<div id="mes">
+				<font color="#F8F8FF" size="4">${info}</font>
+			</div>
+		</form>
+	</div>
+	</div>
+	</center>
+	
+	
+</body>
+</html>

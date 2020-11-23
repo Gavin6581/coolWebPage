@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>青年码农-文件压缩动画按钮</title>
+</head>
+
+<body>
+    <button class="button">
+        <div class="paper left"></div>
+        <div class="paper middle"></div>
+        <div class="paper right"></div>
+        <div class="inner">
+            <div class="zipper">
+                <div class="line"></div>
+                <div class="gradient"></div>
+            </div>
+            <span>Compress files</span>
+            <svg viewBox="0 0 20 16">
+                <polyline points="3 8.75 7.75 13.5 17 2.5"></polyline>
+            </svg>
+        </div>
+    </button>
+    <script>
+        document.querySelectorAll('.button').forEach(button => button.addEventListener('click', e => {
+            if (!button.classList.contains('compress')) {
+
+                button.classList.add('compress');
+
+                setTimeout(() => button.classList.remove('compress'), 4000);
+
+            }
+            e.preventDefault();
+        }));
+    </script>
+</body>
+
+</html>

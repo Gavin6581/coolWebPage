@@ -1,0 +1,239 @@
+:root {
+    --btn-width: 150px;
+    --btn-height: 75px;
+    --first-btn-squeeze: 0.9;
+    --deep-blue: #101048;
+    --orange: #f29e04;
+    --swamp: #239702;
+    --deep-purple: #6f0397;
+    --inactive-blue: #1a647d;
+    --active-blue: #3fc6f4;
+    --red: #d20404;
+    --light-orange: #fff1c5;
+    --yellow: #ffef02;
+    --hot-pink: #ff0563;
+    --default: 0.5s;
+    --fast: 0.3s;
+    --fastest: 0.2s;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    user-select: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+html,
+body {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 50%;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.button-container:first-of-type {
+    background-color: var(--deep-blue);
+}
+
+.button-container:nth-of-type(2) {
+    background-color: var(--orange);
+}
+
+.button-container:nth-of-type(3) {
+    background-color: var(--swamp);
+}
+
+.button-container:nth-of-type(4) {
+    background-color: var(--deep-purple);
+}
+
+@media screen and (max-width: 650px) {
+    .button-container {
+        width: 100%;
+    }
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--btn-height);
+    width: var(--btn-width);
+    font-size: 1.6rem;
+    color: black;
+}
+
+.button--glow {
+    border-radius: 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Nixie One', monospace;
+    transition-property: box-shadow, background-color, transform;
+    transition-duration: var(--default);
+    background-color: var(--inactive-blue);
+    box-shadow: none;
+}
+
+.button--glow:hover {
+    background-color: var(--active-blue);
+    box-shadow: 0px 0px 7px 7px white;
+}
+
+.button--glow:active {
+    background-color: white;
+    transform: scale(var(--first-btn-squeeze));
+    box-shadow: 0px 0px 30px 30px cyan;
+}
+
+.button--block {
+    font-family: 'Graduate', sans-serif;
+    transform: translate3d(-15px, -15px, 0);
+    transition-property: box-shadow, transform;
+    transition-duration: var(--fast);
+    color: var(--red);
+    border: 3px solid var(--red);
+    background-color: var(--light-orange);
+    box-shadow: 15px 15px 5px 0px black;
+}
+
+.button--block:active {
+    transform: translate3d(-5px, -5px, 0);
+    box-shadow: 5px 5px 0px 0px black;
+}
+
+.button--gooey {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: letter-spacing, background-color, font-size;
+    transition-duration: var(--default);
+    letter-spacing: auto;
+    color: var(--swamp);
+    font-family: 'Creepster', serif;
+    font-size: 4rem;
+    background-color: var(--yellow);
+}
+
+.button--gooey::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -10%;
+    height: 120%;
+    width: 0;
+    border-radius: 100%;
+    transform: translate3d(0, 0, 0);
+    transition-property: transform, width;
+    transition-duration: .3s;
+    background-color: var(--swamp);
+    box-shadow: var(--btn-width) 0px 0px 0px var(--swamp);
+}
+
+.button--gooey::after {
+    content: '';
+    position: absolute;
+    left: -10%;
+    top: 0;
+    height: 0;
+    width: 120%;
+    border-radius: 100%;
+    transform: translate3d(0, 0, 0);
+    transition-property: transform, height;
+    transition-duration: .3s;
+    background-color: var(--swamp);
+    box-shadow: 0px var(--btn-height) 0px 0px var(--swamp);
+}
+
+.button--gooey:active {
+    letter-spacing: -2.5px;
+    font-size: 3rem;
+}
+
+.button--gooey:active::before {
+    transform: translate3d(-10px, 0, 0);
+    width: 20px;
+}
+
+.button--gooey:active::after {
+    transform: translate3d(0, -10px, 0);
+    height: 20px;
+}
+
+.button--future {
+    position: relative;
+    transition-property: box-shadow, background-color;
+    transition-duration: var(--fastest);
+    font-family: 'Orbitron', monospace;
+    box-shadow: inset 0px 0px 0px black;
+}
+
+.button--future::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    bottom: 0;
+    height: 100%;
+    width: 2px;
+    transform: translate3d(-50px, 20px, 0);
+    transition-property: box-shadow, transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: .2s;
+    box-shadow: 250px -40px 0px 0px black;
+    background-color: black;
+}
+
+.button--future::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: translate3d(-50px, 20px, 0);
+    transition-property: box-shadow, transform;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    box-shadow: 100px -115px 0px 0px black;
+    background-color: black;
+}
+
+.button--future:hover::before {
+    transform: translate3d(0, 0, 0);
+    box-shadow: var(--btn-width) 0 0px 0px black;
+}
+
+.button--future:hover::after {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 0 calc(var(--btn-height) * -1) 0px 0px black;
+}
+
+.button--future:active {
+    box-shadow: inset 0px 0px 19px black;
+    background-color: var(--hot-pink);
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/回头ml; charset=UTF-8">
+	<title>用户注册页面</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			width: 100%;
+			height: 100vh;
+			background: linear-gradient(-45deg,#ee6654, #90ee90, #2396d5, #23c5ab);
+			background-size: 400% 400%;
+			animation: moveBg 12s linear infinite;
+		}
+		@keyframes moveBg{
+			0%{
+				background-position: 0% 50%;
+			}
+			50%{
+				background-position: 100% 50%;
+			}
+			100%{
+				background-position: 0 50%;
+			}
+		}
+		.login{
+   		 width: 650px;
+   		 height: 450px;
+   		 /* background: red; */
+   		 background: rgba(21, 124, 172, 0.493);
+   		 position: absolute;
+   		 top: calc(50% - 278px);
+  		 left: calc(50% - 320px);
+   		 border-radius: 16px;
+   		 box-shadow: 0 0 5px 0px rgba(123, 194, 199, 0.411);
+   		 text-align: center;
+}
+	</style>
+	<script src="stu_zhuce.js"></script>
+</head>
+
+	<body>
+	<div class="login">
+	<form action="stu_zhuce_yanzheng">
+		<table border="0" align="center" width="700" cellspacing="8px" class="form-group">
+			<tr>
+				<td colspan="3" align="center" height="40">
+					<font color="#FF0000" size="5">填写用户注册信息</font>
+				</td>
+			</tr>
+			<tr>
+				<td align="right"><font color="#F8F8FF" size="4">学号:*</font></td>
+				<td align="left"><input type="text" name="stuId" size="25" /></td>
+			</tr>
+			<tr>
+				<td align="right"><font color="#F8F8FF" size="4">姓名:*</font></td>
+				<td align="left"><input type="text" name="stuName" size="25" /></td>
+			</tr>
+			<tr>
+				<td align="right"><font color="#F8F8FF" size="4">密码:*</font></td>
+				<td align="left"><input type="password" name="stuPwd" size="25" placeholder="设置至少6位登录密码"/></td>
+			</tr>
+			<tr>
+				<td align="right"><font color="#F8F8FF" size="4">再次输入密码:*</font></td>
+				<td align="left"><input type="password" name="stuPwd1" size="25" placeholder="请再次输入登录密码"/></td>
+			</tr>
+			<tr>
+				<td align="right"><font color="#F8F8FF" size="4">性别:*</font></td>
+				<td align="left"><input type="radio" name="stuSex" value="男" checked /><font
+						color="#F8F8FF" size="4">男</font> <input type="radio"name="stuSex" value="女" /><font color="#F8F8FF" size="4">女</font></td>
+
+			</tr>
+			<tr>
+				<td align="right"><font color="#F8F8FF" size="4">专业班级:*</font></td>
+				<td align="left"><input type="text" name="stuClass" size="25" placeholder="例如：软件工程18-3"></td>
+
+			</tr>
+			<tr>
+				<td align="right"><font color="#F8F8FF" size="4">联系方式:*</font></td>
+				<td align="left"><input type="text" name="stuTel" size="25" /></td>
+			</tr>
+			<tr>
+				<td colspan="3" align="center" height="40">
+					<input type="checkbox" name="accept" value="yes" />
+					<font color="#F8F8FF" size="4">我已经仔细阅读并同意接受用户使用协议</font>
+				</td>
+			</tr>
+			<tr>
+				<td height="40" colspan="3" align="center" bordercolor="#666666">
+					<input type="button" value="确认" onClick="validate()"/>&nbsp;
+					<input type="reset" value="取消" />
+					<a href="index.jsp" style="text-decoration: none"><font size="4" color="white">返回首页</font></a>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<div id="mes">
+			<font color="#F8F8FF" size="3">${info}</font>
+		</div>
+	</form>
+</div>
+</body>
+</html>

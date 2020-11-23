@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1dfd1;
+    background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    background: none;
+    border: 2px solid #89db84;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms;
+}
+
+span,
+svg {
+    position: absolute;
+    color: #89db84;
+    fill: transparent;
+}
+
+button:hover {
+    font-size: 14px;
+}
+
+button:focus {
+    outline: none;
+    border: 2px solid transparent;
+    width: 50px;
+    border-left: 2px solid #89db84;
+    border-bottom: 2px solid #89db84;
+    animation: spin 2s 500ms forwards;
+}
+
+button:focus span {
+    color: transparent;
+}
+
+button:focus svg {
+    animation: check 500ms 2300ms forwards;
+}
+
+@keyframes spin {
+    80% {
+        border: 2px solid transparent;
+        border-left: 2px solid #89db84;
+    }
+    100% {
+        transform: rotate(1080deg);
+        border: 2px solid #89db84;
+    }
+}
+
+@keyframes check {
+    to {
+        fill: #89db84
+    }
+}
+
+@keyframes circle {
+    to {
+        border: 2px solid #89db84;
+    }
+}

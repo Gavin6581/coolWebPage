@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>violet evergarden</title>
+<style type="text/css">
+@charset "utf-8";
+*{
+	margin:0;
+	padding:0;
+}
+body{
+    /*background: url(../img/preview.png) ;*/
+    max-width: 100%;
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #0F0F0F;
+}
+li{
+	list-style: none;
+}
+.box{
+	width:200px;
+	height:200px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size:100% 100%;
+	position: absolute;
+	margin-left: 42%;
+	margin-top: 22%;
+	transform-style:preserve-3d;
+	transform:rotateX(13deg);
+	animation:move 30s linear infinite;
+}
+.minbox{
+	width:200px;
+	height:200px;
+	position: absolute;
+	left:50px;
+	top:30px;
+	transform-style:preserve-3d;
+}
+.minbox li{
+	width:100px;
+	height:100px;
+	position: absolute;
+	text-align: center;
+	left:0;
+	top:0;
+	transition:all 2s ease;
+}
+.maxbox{
+	width: 800px;
+	height: 400px;
+	position: absolute;
+	left: 0;
+	top: -20px;
+	transform-style: preserve-3d;
+	
+}
+.maxbox li{
+	width: 200px;
+	height: 200px;
+	background: #fff;
+	border:0px solid #ccc;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0.3;
+	transition:all 3s ease;
+}
+.minbox li:nth-child(1){
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570182782452&di=77598776a6a540f2c2b86801ca169969&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fb3f3f1ae74213661504ea0872d70ca933be63d97.gif) no-repeat center center;
+	transform:rotateX(0deg) translateZ(50px);
+}
+.minbox li:nth-child(2){
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570182782452&di=77598776a6a540f2c2b86801ca169969&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fb3f3f1ae74213661504ea0872d70ca933be63d97.gif) no-repeat center center;
+	transform:rotateY(180deg) translateZ(50px);
+	
+}
+.minbox li:nth-child(3){
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570182782452&di=77598776a6a540f2c2b86801ca169969&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fb3f3f1ae74213661504ea0872d70ca933be63d97.gif) no-repeat center center;
+	transform:rotateX(-90deg) translateZ(50px);
+}
+.minbox li:nth-child(4){
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570182782452&di=77598776a6a540f2c2b86801ca169969&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fb3f3f1ae74213661504ea0872d70ca933be63d97.gif) no-repeat center center;
+	transform:rotateX(90deg) translateZ(50px);
+}
+.minbox li:nth-child(5){
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570182782452&di=77598776a6a540f2c2b86801ca169969&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fb3f3f1ae74213661504ea0872d70ca933be63d97.gif) no-repeat center center;
+	transform:rotateY(-90deg) translateZ(50px);
+}
+.minbox li:nth-child(6){
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570182782452&di=77598776a6a540f2c2b86801ca169969&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fb3f3f1ae74213661504ea0872d70ca933be63d97.gif) no-repeat center center;
+	transform:rotateY(90deg) translateZ(50px);
+}
+.maxbox li:nth-child(1){
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570182782452&di=77598776a6a540f2c2b86801ca169969&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fb3f3f1ae74213661504ea0872d70ca933be63d97.gif) no-repeat center center;
+	transform:rotateX(0deg) translateZ(50px);
+}
+.maxbox li:nth-child(2){
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570182782452&di=77598776a6a540f2c2b86801ca169969&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fb3f3f1ae74213661504ea0872d70ca933be63d97.gif) no-repeat center center;
+	transform:rotateY(180deg) translateZ(50px);
+}
+.maxbox li:nth-child(3){
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570182782452&di=77598776a6a540f2c2b86801ca169969&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fb3f3f1ae74213661504ea0872d70ca933be63d97.gif) no-repeat center center;
+	transform:rotateX(-90deg) translateZ(50px);
+}
+.maxbox li:nth-child(4){
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570182782452&di=77598776a6a540f2c2b86801ca169969&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fb3f3f1ae74213661504ea0872d70ca933be63d97.gif) no-repeat center center;
+	transform:rotateX(90deg) translateZ(50px);
+}
+.maxbox li:nth-child(5){
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570182782452&di=77598776a6a540f2c2b86801ca169969&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fb3f3f1ae74213661504ea0872d70ca933be63d97.gif) no-repeat center center;
+	transform:rotateY(-90deg) translateZ(50px);
+}
+.maxbox li:nth-child(6){
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570182782452&di=77598776a6a540f2c2b86801ca169969&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fb3f3f1ae74213661504ea0872d70ca933be63d97.gif) no-repeat center center;
+	transform:rotateY(90deg) translateZ(50px);
+}
+
+.maxbox li:nth-child(1){
+	transform:translateZ(100px);
+}
+.maxbox li:nth-child(2){
+	transform:rotateY(180deg) translateZ(100px);
+}
+.maxbox li:nth-child(3){
+	transform:rotateX(-90deg) translateZ(100px);
+}
+.maxbox li:nth-child(4){
+	transform:rotateX(90deg) translateZ(100px);
+}
+.maxbox li:nth-child(5){
+	transform:rotateY(-90deg) translateZ(100px);
+}
+.maxbox li:nth-child(6){
+	transform:rotateY(90deg) translateZ(100px);
+}
+.box:hover ul li:nth-child(1){
+	transform:translateZ(100px);
+	width: 200px;
+	height: 200px;
+	opacity: 0.8;
+	left: -50px;
+	top: -50px;
+}
+.box:hover ul li:nth-child(2){
+	transform:rotateY(180deg) translateZ(100px);
+	width: 200px;
+	height: 200px;
+	opacity: 0.8;
+	left: -50px;
+	top: -50px;
+}
+.box:hover ul li:nth-child(3){
+	transform:rotateX(-90deg) translateZ(100px);
+	width: 200px;
+	height: 200px;
+	opacity: 0.8;
+	left: -50px;
+	top: -50px;
+}
+.box:hover ul li:nth-child(4){
+	transform:rotateX(90deg) translateZ(100px);
+	width: 200px;
+	height: 200px;
+	opacity: 0.8;
+	left: -50px;
+	top: -50px;
+}
+.box:hover ul li:nth-child(5){
+	transform:rotateY(-90deg) translateZ(100px);
+	width: 200px;
+	height: 200px;
+	opacity: 0.8;
+	left: -50px;
+	top: -50px;
+}
+.box:hover ul li:nth-child(6){
+	transform:rotateY(90deg) translateZ(100px);
+	width: 200px;
+	height: 200px;
+	opacity: 0.8;
+	left: -50px;
+	top: -50px;
+}
+.box:hover ol li:nth-child(1){
+	transform:translateZ(300px);
+	width: 400px;
+	height: 400px;
+	opacity: 0.8;
+	left: -100px;
+	top: -100px;
+}
+.box:hover ol li:nth-child(2){
+	transform:rotateY(180deg) translateZ(300px);
+	width: 400px;
+	height: 400px;
+	opacity: 0.8;
+	left: -100px;
+	top: -100px;
+}
+.box:hover ol li:nth-child(3){
+	transform:rotateX(-90deg) translateZ(300px);
+	width: 400px;
+	height: 400px;
+	opacity: 0.8;
+	left: -100px;
+	top: -100px;
+}
+.box:hover ol li:nth-child(4){
+	transform:rotateX(90deg) translateZ(300px);
+	width: 400px;
+	height: 400px;
+	opacity: 0.8;
+	left: -100px;
+	top: -100px;
+}
+.box:hover ol li:nth-child(5){
+	transform:rotateY(-90deg) translateZ(300px);
+	width: 400px;
+	height: 400px;
+	opacity: 0.8;
+	left: -100px;
+	top: -100px;
+}
+.box:hover ol li:nth-child(6){
+	transform:rotateY(90deg) translateZ(300px);
+	width: 400px;
+	height: 400px;
+	opacity: 0.8;
+	left: -100px;
+	top: -100px;
+}
+@keyframes move{
+	from {
+    transform: rotateX(13deg) rotateY(360deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(13deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+
+</style>
+
+</head>
+<body>
+
+<div class="box">
+	<ul class="minbox">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ol class="maxbox">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
+</div>
+</body>
+</html>

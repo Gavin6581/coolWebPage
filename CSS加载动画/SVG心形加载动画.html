@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+     :root {
+        --bgColor: rgb(17, 10, 28);
+        --pink: rgb(252, 25, 127);
+        --eggplant: rgb(142, 25, 252);
+        --creamsicle: rgb(252, 150, 25);
+        --black: #333;
+        --baseFont: 16px;
+        --iconSize: 40px;
+        --iconColor: var(--eggplant);
+    }
+    
+    body {
+        background-color: var(--bgColor);
+        font-family: Arial, sans-serif;
+        font-size: var(--baseFont);
+        color: var(--black);
+        line-height: 150%;
+    }
+    
+    .main--wrapper {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .main--wrapper .main-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 600px;
+        height: 100vh;
+    }
+    
+    .icon {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        content: '';
+        width: var(--iconSize);
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    
+    .icon circle {
+        fill: var(--iconColor);
+    }
+    
+    .icon:hover {
+        transform: translateY(-5px);
+    }
+    
+    .heart--container {
+        width: 50px;
+        height: auto;
+    }
+    
+    .heart--container .heart {
+        stroke-width: 15;
+        stroke-dasharray: 500;
+    }
+    
+    .heart--container .heart-1 {
+        stroke: var(--pink);
+        animation: draw 3s ease-in-out alternate infinite;
+    }
+    
+    .heart--container .heart-2 {
+        stroke: var(--eggplant);
+        animation: draw 3s ease-in-out alternate infinite;
+        animation-delay: 0.5s;
+    }
+    
+    .heart--container .heart-3 {
+        stroke: var(--creamsicle);
+        animation: draw 3s ease-in-out alternate infinite;
+        animation-delay: 1s;
+    }
+    
+    @keyframes draw {
+        from {
+            stroke-dashoffset: 0;
+        }
+        to {
+            stroke-dashoffset: 500;
+        }
+    }
+</style>
+
+<body>
+    <div class="main--wrapper">
+        <div class="main-content">
+            <svg class="heart--container" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="-40 -45 200 190" preserveAspectRatio="xMidYMid meet"><path class="heart heart-1" clip-rule="evenodd" d="M92.557 83.522C110.732 67.185 120 51.137 120 35.544 120 16.342 107.467 2.069 90.822 2 83.204 2 79 2.776 73.992 5.226a27.497 27.497 0 00-8.197 6.127l-4.78 5.183-4.823-5.142a27.963 27.963 0 00-8.073-5.982C42.96 2.862 38.477 2 31.202 2 14.348 2 2 16.071 2 35.544c0 15.593 9.268 31.641 27.443 47.978C39.353 92.43 52.091 101.33 61 106c8.909-4.67 21.648-13.571 31.557-22.478z"></svg>
+
+            <svg class="heart--container" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="-40 -45 200 190"><path class="heart heart-2" clip-rule="evenodd" d="M92.557 83.522C110.732 67.185 120 51.137 120 35.544 120 16.342 107.467 2.069 90.822 2 83.204 2 79 2.776 73.992 5.226a27.497 27.497 0 00-8.197 6.127l-4.78 5.183-4.823-5.142a27.963 27.963 0 00-8.073-5.982C42.96 2.862 38.477 2 31.202 2 14.348 2 2 16.071 2 35.544c0 15.593 9.268 31.641 27.443 47.978C39.353 92.43 52.091 101.33 61 106c8.909-4.67 21.648-13.571 31.557-22.478z"></svg>
+
+            <svg class="heart--container" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="-40 -45 200 190"><path class="heart heart-3" clip-rule="evenodd" d="M92.557 83.522C110.732 67.185 120 51.137 120 35.544 120 16.342 107.467 2.069 90.822 2 83.204 2 79 2.776 73.992 5.226a27.497 27.497 0 00-8.197 6.127l-4.78 5.183-4.823-5.142a27.963 27.963 0 00-8.073-5.982C42.96 2.862 38.477 2 31.202 2 14.348 2 2 16.071 2 35.544c0 15.593 9.268 31.641 27.443 47.978C39.353 92.43 52.091 101.33 61 106c8.909-4.67 21.648-13.571 31.557-22.478z"></svg>
+        </div>
+
+    </div>
+</body>
+
+</html>
